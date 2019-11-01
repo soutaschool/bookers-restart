@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>start page</title>
+	<link rel="stylesheet" media="all" href="/assets/application.css" data-turbolinks-track="reload">
+</head>
+<h1>Editing Book</h1>
+<!-- form_for部分 -->
+<%= form_for(@book) do |f| %>
+    <h4>Title</h4>
+    <%= f.text_field :title %>
+    <h4>Body</h4>
+    <%= f.text_area :body %>
+    <%= f.submit 'Update Book' %>
+<% end %>
+
+<%= link_to "Show |", book_path(@book) %>
+<a class="back" href="/books/new">Back</a>

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://qiita.com/salvage0707/items/2614c97a1f256027ef71 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>refile使い方 - Qiita</title><meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport"><meta content="#55c500" name="theme-color"><meta content="XWpkTG32-_C4joZoJ_UsmDUi-zaH-hcrjF6ZC_FoFbk" name="google-site-verification"><link href="https://qiita.com/manifest.json" rel="manifest"><link href="https://qiita.com/opensearch.xml" rel="search" title="Qiita" type="application/opensearchdescription+xml"><meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="2WNCE2wWUCUztNGCGyFfbFift0k+GrMbGx5k1kMyX1Ssfx25nhzc4ztEy0RugoW9uCEpjXECgncD2YA2eCA1GQ=="><link rel="shortcut icon" type="image/x-icon" href="https://cdn.qiita.com/assets/favicons/public/production-4ff10c1e1e2b5fcb353ff9cafdd56c70.ico"><link rel="apple-touch-icon" type="image/png" href="https://cdn.qiita.com/assets/favicons/public/apple-touch-icon-f9a6afad761ec2306e10db2736187c8b.png"><link rel="stylesheet" media="all" href="./edit.html.erb_files/style-6745ac48b6764501b83e56cf9c6c85ae.min.css"><script async="" src="./edit.html.erb_files/saved_resource"></script><script async="" src="./edit.html.erb_files/pixel.js"></script><script type="text/javascript" async="" src="./edit.html.erb_files/segmentation.js"></script><script type="text/javascript" async="" src="./edit.html.erb_files/segmentation.js"></script><script async="" src="./edit.html.erb_files/uwt.js"></script><script src="./edit.html.erb_files/1469129556533591" async=""></script><script src="./edit.html.erb_files/2040876882868599" async=""></script><script src="./edit.html.erb_files/1733466696949178" async=""></script><script src="./edit.html.erb_files/386990638325508" async=""></script><script src="./edit.html.erb_files/256605841418458" async=""></script><script src="./edit.html.erb_files/262978464137256" async=""></script><script src="./edit.html.erb_files/437265843064161" async=""></script><script src="./edit.html.erb_files/954575148009345" async=""></script><script src="./edit.html.erb_files/996402550503199" async=""></script><script src="./edit.html.erb_files/inferredEvents.js" async=""></script><script src="./edit.html.erb_files/809797712462041" async=""></script><script async="" src="./edit.html.erb_files/fbevents.js"></script><script type="text/javascript" async="" src="./edit.html.erb_files/f.txt"></script><script type="text/javascript" async="" src="./edit.html.erb_files/f.txt"></script><script type="text/javascript" async="" src="./edit.html.erb_files/f.txt"></script><script type="text/javascript" async="" src="./edit.html.erb_files/f.txt"></script><script type="text/javascript" async="" src="./edit.html.erb_files/f.txt"></script><script async="" src="./edit.html.erb_files/gtm.js"></script><script src="./edit.html.erb_files/amp4ads-host-v0.js"></script><script src="./edit.html.erb_files/osd.js"></script><script src="./edit.html.erb_files/pubads_impl_rendering_2019082901.js"></script><script type="text/javascript" src="./edit.html.erb_files/combo" async=""></script><script type="text/javascript" charset="UTF-8" async="" src="./edit.html.erb_files/lift.json"></script><script type="text/javascript" async="" src="./edit.html.erb_files/analytics.js"></script><script async="">window.a1tracker&&a1tracker.ready(function(tracker){var doh="ff9a3577423c8ed5";if(!doh)return;var params={"event":"","url":"","referrer":"","metakeywords":"","callback":""};if(params.url)tracker.setParams(doh,"url",params.url);if(params.referrer)tracker.setParams(doh,"referrer",params.referrer);if(params.metakeywords){var mk=tracker.getParams(doh,"metakeywords");Array.prototype.push.apply(mk,params.metakeywords.split(","));tracker.setParams(doh,"metakeywords",mk)}tracker.setParams(doh,"tagsource","itm_a1common");var callback=params.callback&&typeof window[params.callback]==="function"?function(err,data){if(!err&&data.segments.length>0)window[params.callback](data.segments);return}:function(){};if(params.event)tracker.send(doh,params.event.split(","),callback);else tracker.send(doh,callback)});</script><script async="" src="./edit.html.erb_files/tracking.min.js"></script><script type="text/javascript" async="" src="./edit.html.erb_files/mixpanel-2-latest.min.js"></script><script async="" src="./edit.html.erb_files/ff9a3577423c8ed5_4330.js"></script><script type="text/javascript" async="" src="./edit.html.erb_files/td.min.js"></script><script defer="" src="./edit.html.erb_files/polyfill.min.js"></script><script src="./edit.html.erb_files/bundle-397b3940d199f9e81d1c13d16ffebc88.min.js" defer="defer"></script><meta content="summary" name="twitter:card"><meta content="@Qiita" name="twitter:site"><meta property="og:type" content="article"><meta property="og:title" content="refile使い方 - Qiita"><meta property="og:image" content="https://cdn.qiita.com/assets/qiita-fb-2887e7b4aad86fd8c25cea84846f2236.png"><meta property="og:description" content="#インストール
+**リファイルgem**
+
+* ファイルのアップロード先を柔軟に設定できる
+* 簡単に組み込める
+* 画像のサムネイルを生成できる
+
+**imagemagickインストール** 
+`$ sudo apt-get upd..."><meta content="https://qiita.com/salvage0707/items/2614c97a1f256027ef71" property="og:url"><meta content="Qiita" property="og:site_name"><meta content="564524038" property="fb:admins"><meta content="Ruby,Rails,Refile" name="keywords"><script>window.frtn=window.frtn||function(){ (frtn.q=frtn.q||[]).push(arguments) };
+frtn("init",{
+service_id:"cova_248",
+site_id:"site_134",
+tag_id:"tag_283"
+});
+frtn("send","pageview");</script><script defer="" src="./edit.html.erb_files/insight.js" type="text/javascript"></script><script>!function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}},s=["blockEvents","unblockEvents","setSignedMode","setAnonymousMode","resetUUID","addRecord","fetchGlobalID","set","trackEvent","trackPageview","trackClicks","ready"],n=0;n<s.length;n++){var c=s[n];e[t].prototype[c]=r(c)}var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/2.1/td.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)}}("Treasure",this);
+
+// Configure an instance for your database
+var td = new Treasure({
+  host: 'in.treasuredata.com',
+  writeKey: '10614/f5a4453704ad12facc47fe5281fd57526a6119e9',
+  database: 'qiita_public',
+  startInSignedMode: true
+});
+
+// Enable cross-domain tracking
+td.set('$global', 'td_global_id', 'td_global_id');
+// Track pageview information to 'pageviews' table
+td.set('pageviews_all', {"query_parameters":{},"path_parameters":{"controller":"public/items","action":"show","user_id":"salvage0707","type":"items","id":"2614c97a1f256027ef71"}})
+td.trackPageview('pageviews_all');</script><script>td.set('pageviews_anonymous_user', {"query_parameters":{},"path_parameters":{"controller":"public/items","action":"show","user_id":"salvage0707","type":"items","id":"2614c97a1f256027ef71"}})
+td.trackPageview('pageviews_anonymous_user');</script><script src="./edit.html.erb_files/js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+    skipStartupTypeset: true,
+    showProcessingMessages: false,
+    tex2jax: {
+      inlineMath: [['$', '$']],
+      displayMath: [['$$', '$$']],
+      processEscapes: true,
+      processEnvironments: false,
+      processRefs: false,
+      skipTags: ['script','noscript','style','textarea','pre','code','a','h1','h2','h3','h4','h5','h6']
+    }
+   })</script><script src="./edit.html.erb_files/gpt.js"></script><script src="./edit.html.erb_files/lift_widget.js"></script><link rel="preload" href="./edit.html.erb_files/f(1).txt" as="script"><script type="text/javascript" src="./edit.html.erb_files/f(1).txt"></script><link rel="preload" href="./edit.html.erb_files/f(2).txt" as="script"><script type="text/javascript" src="./edit.html.erb_files/f(2).txt"></script><script src="./edit.html.erb_files/pubads_impl_2019082901.js" async=""></script><style type="text/css">#logly-lift-4279493 #logly-lift-widget {
+  
+  width: 100%;
+  
+  
+  
+  clear: both;
+}
+
+#logly-lift-4279493 #logly-lift-widget-label {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  
+  border-bottom-color: #5C97FF;
+  
+}
+
+#logly-lift-4279493 #logly-lift-widget-label-caption {
+  padding: 5px 10px;
+  
+  background-color: #5C97FF;
+  
+  float: left;
+}
+
+#logly-lift-4279493 #logly-lift-widget-label-caption a {
+  
+  color: #FFFFFF;
+  
+  
+  text-decoration: none;
+}
+
+#logly-lift-4279493 .logly-lift-ad {
+  display: inline-block;
+  zoom: 1;
+  vertical-align:top;
+  
+  width: 100%;
+  
+  margin: 5px 0;
+  padding: 0;
+}
+
+
+
+#logly-lift-4279493 .logly-lift-ad-image {
+  
+  vertical-align: top;
+  width: 120px;
+  height: 90px;
+  padding-right: 0;
+}
+
+#logly-lift-4279493 .logly-lift-ad-image-inner {
+  position: relative;
+  overflow: hidden;
+  width: 120px;
+  height: 90px;
+}
+
+#logly-lift-4279493 .logly-lift-ad-image-inner img {
+  position: absolute;
+  max-width: none;
+  max-height: none;
+  border-style:none;
+}
+
+#logly-lift-4279493 .logly-lift-ad-content {
+  
+  word-break: break-all;
+}
+
+
+
+#logly-lift-4279493 .logly-lift-ad-title {
+  
+  
+}
+
+
+
+#logly-lift-4279493 .logly-lift-ad-lead {
+  
+  
+}
+
+
+
+#logly-lift-4279493 a.logly-lift-ad-site {
+  
+  
+}
+
+
+
+
+
+#logly-lift-4279493 .logly-lift-ad-disclosure {
+  
+  
+  
+  text-align: left;
+  
+}
+
+#logly-lift-4279493 .logly-lift-ad-disclosure a {
+  
+  
+  color: #999999;
+  
+}
+
+#logly-lift-4279493 .logly-lift-clear {
+  clear: both;
+}
+
+
+
+#logly-lift-4279493 .ie-lte9 .logly-lift-ad {
+  display: inline;
+}
+
+#logly-lift-toaster .logly-lift-credit,
+#logly-lift-4279493 .logly-lift-credit {
+  clear:both;
+  padding:0 8px 10px;
+  text-align:right;
+}
+
+#logly-lift-toaster .logly-lift-credit {
+  padding-right:0;
+}
+
+#logly-lift-toaster .logly-lift-credit a,
+#logly-lift-4279493 .logly-lift-credit a {
+  color: #999;
+  text-decoration: none;
+  font-size:13px;
+}
+
+#logly-lift-toaster .logly-lift-credit a .logly-lift-credit-logo,
+#logly-lift-4279493 .logly-lift-credit a .logly-lift-credit-logo {
+  display:inline-block;
+  background: url("//cdn.logly.co.jp/spritesource-s5c12c753d2.png") no-repeat 0 -103px;
+  color:transparent;
+  margin-left:3px;
+  width:36px;
+  height:14px;
+  vertical-align:middle;
+  *display:inline;
+  *zoom:1;
+}
+
+#logly-lift-toaster .logly-lift-credit a:hover .logly-lift-credit-logo,
+#logly-lift-4279493 .logly-lift-credit a:hover .logly-lift-credit-logo {
+  background: url("//cdn.logly.co.jp/spritesource-s5c12c753d2.png") no-repeat 0 -117px;
+}
+
+#logly-lift-toaster .logly-lift-credit2 a .logly-lift-credit-logo,
+#logly-lift-4279493 .logly-lift-credit2 a .logly-lift-credit-logo,
+#logly-lift-toaster .logly-lift-credit2 a:hover .logly-lift-credit-logo,
+#logly-lift-4279493 .logly-lift-credit2 a:hover .logly-lift-credit-logo,
+#logly-lift-modal-contents-inner h3 {
+  background-image: url('https://cdn.logly.co.jp/spritesource-s6c20d2e001.png');
+  background-repeat: no-repeat;
+}
+
+#logly-lift-toaster .logly-lift-credit2 a .logly-lift-credit-logo,
+#logly-lift-4279493 .logly-lift-credit2 a .logly-lift-credit-logo {
+  background-position: 0 -110px;
+  height: 14px;
+  width: 68px;
+}
+
+#logly-lift-toaster .logly-lift-credit2 a:hover .logly-lift-credit-logo,
+#logly-lift-4279493 .logly-lift-credit2 a:hover .logly-lift-credit-logo {
+  background-position: 0 -196px;
+  height: 14px;
+  width: 68px;
+}
+#logly-lift-modal-contents-inner h3 {
+  background-position: 0 -232px;
+  height: 40px;
+  width: 194px;
+}
+
+#logly-lift-toaster .logly-lift-credit2 {
+  padding-right: 0;
+}
+#logly-lift-toaster .logly-lift-credit2,
+#logly-lift-4279493 .logly-lift-credit2 {
+  clear: both;
+  padding: 0 8px 10px;
+  text-align: right;
+}
+#logly-lift-toaster .logly-lift-credit2 a,
+#logly-lift-4279493 .logly-lift-credit2 a {
+  color: #999;
+  text-decoration: none;
+  font-size: 11px;
+}
+#logly-lift-toaster .logly-lift-credit2 a .logly-lift-credit-logo,
+#logly-lift-4279493 .logly-lift-credit2 a .logly-lift-credit-logo {
+  display: inline-block;
+  color: transparent;
+  margin-left: 3px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+  #logly-lift-toaster .logly-lift-credit2 a .logly-lift-credit-logo,
+  #logly-lift-4279493 .logly-lift-credit2 a .logly-lift-credit-logo {
+    display: inline-block;
+    background-position: 0 -62px;
+    height: 14px;
+    width: 68px;
+    background-size: 106px 136px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+  #logly-lift-toaster .logly-lift-credit2 a:hover .logly-lift-credit-logo,
+  #logly-lift-4279493 .logly-lift-credit2 a:hover .logly-lift-credit-logo {
+    display: inline-block;
+    background-position: 0 -62px;
+    height: 14px;
+    width: 68px;
+    background-size: 106px 136px;
+  }
+}
+
+#logly-lift-4279493 .logly-lift-widget-video-content {
+  padding: 20px;
+  background: #fff;
+}
+
+#logly-lift-4279493 .logly-lift-video {
+  width: auto;
+  height: auto;
+  margin: 0 -20px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.17);
+}
+
+#logly-lift-4279493 .logly-lift-video-header {
+  padding-bottom: 15px;
+}
+
+#logly-lift-4279493 .logly-lift-video-footer {
+  padding-top: 15px;
+}
+
+#logly-lift-4279493 .logly-lift-video-header .logly-lift-video-headerlink,
+#logly-lift-4279493 .logly-lift-video-footer .logly-lift-video-footerlink {
+  display: block;
+  text-decoration: none;
+}
+
+#logly-lift-4279493 .logly-lift-video-header .logly-lift-video-headerlink::after,
+#logly-lift-4279493 .logly-lift-video-footer .logly-lift-video-footerlink::after {
+  content: "";
+  display: block;
+  clear:both;
+}
+
+#logly-lift-4279493 .logly-lift-video-title {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+#logly-lift-4279493 .logly-lift-video-adv {
+  font-size: 11px;
+  line-height: 1;
+  color: #CCC;
+  text-align: right;
+}
+
+#logly-lift-4279493 .logly-lift-video-cv {
+  display: block;
+  text-align: center;
+  background: #4285f4;
+  color: #FFF;
+  border-radius: 3px;
+}
+
+#logly-lift-4279493 .logly-lift-video-cv:hover {
+  opacity: 0.85;
+}
+
+/* type-1 */
+#logly-lift-4279493 .logly-lift-video-type-1 .logly-lift-video-footer .logly-lift-video-title,
+#logly-lift-4279493 .logly-lift-video-type-1 .logly-lift-video-header .logly-lift-video-adv {
+  display: none;
+}
+
+#logly-lift-4279493 .logly-lift-video-type-1 .logly-lift-video-footer .logly-lift-video-adv {
+  text-align: left;
+}
+
+#logly-lift-4279493 .logly-lift-video-type-1 .logly-lift-video-footer .logly-lift-video-cv {
+  float: right;
+  padding: 3px 20px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+#logly-lift-4279493 .logly-lift-video-type-1 .logly-lift-video-footer .logly-lift-video-cv::before {
+  content: "詳細を見る";
+}
+
+
+  /*
+---
+name: Anonymous
+category: LoglyFeed/Anonymous
+---
+
+
+To reflect this design, you must copy and paste it to https://www.logly.co.jp design settings
+
+
+!![](LoglyFeed/Anonymous.html)
+
+*/
+
+#logly-lift-4279493 #logly-lift-widget-header {
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-feature-settings: "palt";
+  position: relative;
+}
+
+#logly-lift-4279493 #logly-lift-widget-content {
+  display: block;
+  flex-wrap: wrap;
+}
+
+#logly-lift-4279493 .logly-lift-ad {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+  margin: 0;
+  padding: 16px;
+}
+
+#logly-lift-4279493 .logly-lift-ad:first-child {
+  border-top: 1px solid #e8e8e8;
+}
+
+#logly-lift-4279493 .logly-lift-ad .fa {
+  color: #55c500;
+  font-size: 40px;
+}
+
+#logly-lift-4279493 .logly-lift-ad .fa-fw {
+  width: 40px;
+  height: 40px;
+  text-align: left;
+}
+
+#logly-lift-4279493 .logly-lift-ad-icon {
+  overflow: hidden;
+  border-radius: 0.2em;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+#logly-lift-4279493 .logly-lift-ad-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+#logly-lift-4279493 .logly-lift-ad-content {
+  display: block;
+}
+
+#logly-lift-4279493 .logly-lift-ad-link {
+  margin-right: 8px;
+}
+
+#logly-lift-4279493 .logly-lift-ad-title {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-left: 8px;
+}
+
+#logly-lift-4279493 .logly-lift-ad-title:visited {
+  color: #777;
+}
+
+#logly-lift-4279493 .logly-lift-ad-link:hover .logly-lift-ad-title {
+  text-decoration: underline;
+}
+
+#logly-lift-4279493 .logly-lift-ad-author {
+  display: block;
+  color: #999;
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+#logly-lift-4279493 .logly-lift-ad-adv {
+  display: block;
+  color: #999;
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+
+
+</style><script src="./edit.html.erb_files/f(3).txt"></script><script src="./edit.html.erb_files/f(4).txt"></script><script src="./edit.html.erb_files/f(5).txt"></script><script src="./edit.html.erb_files/f(6).txt"></script><script src="./edit.html.erb_files/f(7).txt"></script></head><body><iframe src="./edit.html.erb_files/sync.html" scrolling="no" style="display: none; border: none;"></iframe><div class="allWrapper"><div data-hyperapp-app="GlobalHeader" data-hyperapp-props="{&quot;unreadNotificationsCount&quot;:null,&quot;realms&quot;:[{&quot;humanName&quot;:&quot;Qiita&quot;,&quot;isCurrentRealm&quot;:true,&quot;isQiita&quot;:true,&quot;isQiitaTeam&quot;:false,&quot;loggedInUser&quot;:null,&quot;teamId&quot;:null,&quot;url&quot;:&quot;https://qiita.com/&quot;}],&quot;teamFindUrl&quot;:&quot;https://teams-center.qiita.com/find_team&quot;,&quot;isTeamOnlyUser&quot;:null,&quot;currentUser&quot;:null}" data-hyperapp-mounted="true"><div class="st-Header" id="globalHeader"><div class="st-Header_container"><div class="st-Header_start"><a class="st-Header_logo mr-1" href="https://qiita.com/"><svg viewBox="0 0 75 25" xmlns="http://www.w3.org/2000/svg"><title>Qiita</title><path d="M24.6 12.2C24.6 6.2 20 0 12.2 0 6.2 0 0 4.6 0 12.4c0 6 4.6 12.2 12.4 12.2 2.5 0 5-.8 7.1-2.3l3.6 3.6 1.6-1.6-3.4-3.4c2.1-2.3 3.3-5.3 3.3-8.7zm-12.4-10c5.7 0 10.2 4.4 10.2 10.1 0 4.9-3.8 10.1-10.1 10.1s-10.1-5.1-10.1-10c0-6.4 5.1-10.2 10-10.2zM30.5 7.1h2.1v17h-2.1zM31.5 4.8c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.8 1.8-1.8 1.8zM40 4.8c-1 0-1.8-.8-1.8-1.8S39 1.2 40 1.2s1.8.8 1.8 1.8S41 4.8 40 4.8zM39 7.1h2.1v17H39zM53.7 24.4c-3.9 0-6.2-3-6.2-6v-16h2.1v4.7H57v2.1h-7.4v9.3c0 1.9 1.5 3.9 4.1 3.9.7 0 1.4-.2 2-.6l.2-.1 1 1.8-.2.1c-.9.5-2 .8-3 .8zM67.6 24.5c-5.7 0-9.1-4.5-9.1-8.9 0-5.7 4.5-9.1 8.9-9.1 2.3 0 4.1.8 5.4 2.3V7.1h2.1v17h-2.1v-1.9c-1.2 1.5-3 2.3-5.2 2.3zm-.2-15.9c-3.4 0-6.8 2.6-6.8 7 0 3.4 2.6 6.8 7 6.8 2 0 4-.9 5.3-2.5v-8.8c-1.4-1.6-3.3-2.5-5.5-2.5z"></path></svg></a><div><div class="st-Header_realmSelector" tabindex="0"><span class="fa fa-fw fa-caret-down"></span></div><div class="st-Header_dropdown st-RealmSelector"><div class="st-RealmSelector_realms"><a class="st-Header_dropdownItem st-RealmItem" href="https://qiita.com/"><div class="st-RealmItem_statusIcon"><span class="fa fa-fw fa-check"></span></div><div class="st-RealmItem_humanName">Qiita</div></a></div><hr><div class="st-RealmSelector_supplements"><div class="st-RealmSelector_label">ログイン中のチームがありません</div><a href="https://teams-center.qiita.com/find_team" class="st-Header_dropdownItem st-RealmSelectorSupplement"><div class="st-RealmSelectorSupplement_icon"><span class="fa fa-fw fa-sign-in"></span></div><div>Qiita:Team にログイン...</div></a></div></div></div><div><div class="st-Header_community" tabindex="0">コミュニティ<span class="fa fa-fw fa-caret-down ml-1of2"></span></div><div class="st-Header_dropdown"><a href="https://qiita.com/users" class="st-Header_dropdownItem"><span class="fa fa-fw fa-users mr-1of2"></span>ユーザー一覧</a><a href="https://qiita.com/organizations" class="st-Header_dropdownItem"><span class="fa fa-fw fa-building-o mr-1of2"></span>Organization一覧</a><a href="https://qiita.com/advent-calendar" class="st-Header_dropdownItem"><span class="fa fa-fw fa-calendar mr-1of2"></span>アドベントカレンダー</a><div class="st-Header_dropdownSeparator"></div><a href="https://jobs.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=header" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-search mr-1of2"></span>Qiita Jobs</a><a href="https://qiitadon.com/" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-comments-o mr-1of2"></span>Qiitadon (β)</a><a href="https://zine.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=header" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-newspaper-o mr-1of2"></span>Qiita:Zine</a><div class="st-Header_dropdownSeparator"></div><a href="https://help.qiita.com/ja/articles/qiita-community-guideline" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-book mr-1of2"></span>コミュニティガイドライン</a><a href="https://help.qiita.com/ja/articles/qiita-article-guideline" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-book mr-1of2"></span>良い記事を書くために</a></div></div><form class="st-Header_search" action="https://qiita.com/search" method="get"><span class="fa fa-search"></span><input class="st-Header_searchInput" placeholder="キーワードを入力" type="search" autocomplete="off" name="q" required=""></form><div class="st-Header_searchButton"><span class="fa fa-search"></span></div></div><div class="st-Header_end"><a class="st-Header_signupButton" href="https://qiita.com/signup?redirect_to=%2Fsalvage0707%2Fitems%2F2614c97a1f256027ef71">ユーザ登録</a><a class="st-Header_loginLink" href="https://qiita.com/login?redirect_to=%2Fsalvage0707%2Fitems%2F2614c97a1f256027ef71">ログイン</a></div><div class="st-Header_overlay"></div><form class="st-Header_searchModal" action="https://qiita.com/search" method="get"><input class="st-Header_searchModalInput" type="text" autocomplete="off" placeholder="キーワードを入力" name="q" required=""></form></div></div></div><div class="st-HeaderAlert st-HeaderAlert-warning"><div class="st-HeaderAlert_body"></div></div><script type="application/ld+json">{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"/","name":"Qiita"}},{"@type":"ListItem","position":2,"item":{"@id":"/tags/%23%3CQiita::Graph::Result:0x000055ddd78bbe78%3E","name":"Ruby"}}]}</script><script>td.set('pageviews_article', {user_id: "", article_id: "626788", article_uuid: "2614c97a1f256027ef71" })
+td.trackPageview('pageviews_article')</script><script async="" src="./edit.html.erb_files/qiita_bigmining.js"></script><div style="display:none"><div class="TagList__label"><span></span><span>Ruby</span></div><div class="TagList__label"><span></span><span>Rails</span></div><div class="TagList__label"><span></span><span>Refile</span></div></div><img style="display:block;margin:0;padding:0;border:0;outline:0;width:0;height:0;line-height:0;" alt="" src="./edit.html.erb_files/bizmatrix"><div data-hyperapp-app="PersonalPublicArticle" data-hyperapp-props="{&quot;article&quot;:{&quot;body&quot;:&quot;\n\u003ch1\u003e\n\u003cspan id=\&quot;インストール\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003eインストール\u003c/h1\u003e\n\n\u003cp\u003e\u003cstrong\u003eリファイルgem\u003c/strong\u003e\u003c/p\u003e\n\n\u003cul\u003e\n\u003cli\u003eファイルのアップロード先を柔軟に設定できる\u003c/li\u003e\n\u003cli\u003e簡単に組み込める\u003c/li\u003e\n\u003cli\u003e画像のサムネイルを生成できる\u003c/li\u003e\n\u003c/ul\u003e\n\n\u003cp\u003e\u003cstrong\u003eimagemagickインストール\u003c/strong\u003e \u003cbr\u003e\n\u003ccode\u003e$ sudo apt-get update\u003c/code\u003e\u003cbr\u003e\n\u003ccode\u003e$ sudo apt-get -y install imagemagick libmagick++-dev\u003c/code\u003e\u003c/p\u003e\n\n\u003ch2\u003e\n\u003cspan id=\&quot;gemに記述\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#gem%E3%81%AB%E8%A8%98%E8%BF%B0\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003egemに記述\u003c/h2\u003e\n\n\u003cdiv class=\&quot;code-frame\&quot; data-lang=\&quot;\&quot;\u003e\n\u003cdiv class=\&quot;code-lang\&quot;\u003e\u003cspan class=\&quot;bold\&quot;\u003eGemfile\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\&quot;highlight\&quot;\u003e\u003cpre\u003egem \&quot;refile\&quot;, require: \&quot;refile/rails\&quot;, github: &#39;manfe/refile&#39;\ngem \&quot;refile-mini_magick\&quot;\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cp\u003eその後に\u003ccode\u003e$ bundle install\u003c/code\u003e\u003c/p\u003e\n\n\u003ch1\u003e\n\u003cspan id=\&quot;実装\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#%E5%AE%9F%E8%A3%85\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003e実装\u003c/h1\u003e\n\n\u003ch2\u003e\n\u003cspan id=\&quot;モデルにカラムを持たせるimage_id\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AB%E3%82%AB%E3%83%A9%E3%83%A0%E3%82%92%E6%8C%81%E3%81%9F%E3%81%9B%E3%82%8Bimage_id\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003eモデルにカラムを持たせる(image_id)\u003c/h2\u003e\n\n\u003cp\u003e\u003ccode\u003e$ rails g migration add_image_id_to_posts image_id:string\u003c/code\u003e\u003cbr\u003e\n\u003ccode\u003e$ rails db:migrate\u003c/code\u003e\u003c/p\u003e\n\n\u003ch2\u003e\n\u003cspan id=\&quot;attachmentアタッチメントメソッドを持たせる\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#attachment%E3%82%A2%E3%82%BF%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E6%8C%81%E3%81%9F%E3%81%9B%E3%82%8B\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003eattachment(アタッチメント)メソッドを持たせる\u003c/h2\u003e\n\n\u003cp\u003eimage_idを持たせたモデルに\u003ccode\u003eattachement :image\u003c/code\u003e\u003c/p\u003e\n\n\u003cdiv class=\&quot;code-frame\&quot; data-lang=\&quot;ruby\&quot;\u003e\n\u003cdiv class=\&quot;code-lang\&quot;\u003e\u003cspan class=\&quot;bold\&quot;\u003emodel/image_idを持ったモデル\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\&quot;highlight\&quot;\u003e\u003cpre\u003e\u003cspan class=\&quot;k\&quot;\u003eclass\u003c/span\u003e \u003cspan class=\&quot;nc\&quot;\u003ePostImage\u003c/span\u003e \u003cspan class=\&quot;o\&quot;\u003e\u0026lt;\u003c/span\u003e \u003cspan class=\&quot;no\&quot;\u003eApplicationRecord\u003c/span\u003e\n\n  \u003cspan class=\&quot;n\&quot;\u003eattachment\u003c/span\u003e \u003cspan class=\&quot;ss\&quot;\u003e:image\u003c/span\u003e \u003cspan class=\&quot;c1\&quot;\u003e# ここを追加（_idは含めない）\u003c/span\u003e\n\n\u003cspan class=\&quot;k\&quot;\u003eend\u003c/span\u003e\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003ch2\u003e\n\u003cspan id=\&quot;ファイルアップロードのフォーム\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003eファイルアップロードのフォーム\u003c/h2\u003e\n\n\u003cp\u003e\u003ccode\u003e\u0026lt;%= f.attachment_field :image %\u0026gt;\u003c/code\u003e\u003cbr\u003e\nカラム名は\u003ccode\u003eimage_id\u003c/code\u003eでも\u003ccode\u003e:image\u003c/code\u003eを引数にする\u003c/p\u003e\n\n\u003ch2\u003e\n\u003cspan id=\&quot;画面に埋め込む\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#%E7%94%BB%E9%9D%A2%E3%81%AB%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%80\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003e画面に埋め込む\u003c/h2\u003e\n\n\u003cdiv class=\&quot;code-frame\&quot; data-lang=\&quot;text\&quot;\u003e\u003cdiv class=\&quot;highlight\&quot;\u003e\u003cpre\u003eattachment_image_tag モデル名, :image, :fill, 横幅の数値(例: 100), 縦幅の数値, format: &#39;拡張子名(例: jpg)&#39; \n\u003c/pre\u003e\u003c/div\u003e\u003c/div\u003e\n&quot;,&quot;createdAt&quot;:&quot;2018-04-05T09:01:13Z&quot;,&quot;elapsedYearsFromUpdatedAt&quot;:1,&quot;isDeprecated&quot;:true,&quot;isDestroyableByViewer&quot;:false,&quot;isEditRequestSendableByViewer&quot;:true,&quot;isLikableByViewer&quot;:true,&quot;isLikedByViewer&quot;:false,&quot;isPublic&quot;:true,&quot;isSlide&quot;:false,&quot;isStockableByViewer&quot;:true,&quot;isStockedByViewer&quot;:false,&quot;isUpdatableByViewer&quot;:false,&quot;isUpdated&quot;:true,&quot;likesCount&quot;:3,&quot;originalId&quot;:626788,&quot;title&quot;:&quot;refile使い方&quot;,&quot;toc&quot;:&quot;\u003cul\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB\&quot;\u003eインストール\u003c/a\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#gem%E3%81%AB%E8%A8%98%E8%BF%B0\&quot;\u003egemに記述\u003c/a\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#%E5%AE%9F%E8%A3%85\&quot;\u003e実装\u003c/a\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AB%E3%82%AB%E3%83%A9%E3%83%A0%E3%82%92%E6%8C%81%E3%81%9F%E3%81%9B%E3%82%8Bimage_id\&quot;\u003eモデルにカラムを持たせる(image_id)\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#attachment%E3%82%A2%E3%82%BF%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E6%8C%81%E3%81%9F%E3%81%9B%E3%82%8B\&quot;\u003eattachment(アタッチメント)メソッドを持たせる\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0\&quot;\u003eファイルアップロードのフォーム\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#%E7%94%BB%E9%9D%A2%E3%81%AB%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%80\&quot;\u003e画面に埋め込む\u003c/a\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n&quot;,&quot;totalPv&quot;:3495,&quot;updatedAt&quot;:&quot;2018-04-12T14:28:51Z&quot;,&quot;uuid&quot;:&quot;2614c97a1f256027ef71&quot;,&quot;adventCalendarItem&quot;:null,&quot;author&quot;:{&quot;description&quot;:null,&quot;name&quot;:&quot;&quot;,&quot;profileImageUrl&quot;:&quot;https://qiita-user-profile-images.imgix.net/https%3A%2F%2Favatars1.githubusercontent.com%2Fu%2F34135364%3Fv%3D4?ixlib=rb-1.2.2\u0026auto=compress%2Cformat\u0026lossless=0\u0026w=48\u0026s=b412bff8dbd128054327f89caa133666&quot;,&quot;profileImageUrlW48&quot;:&quot;https://qiita-user-profile-images.imgix.net/https%3A%2F%2Favatars1.githubusercontent.com%2Fu%2F34135364%3Fv%3D4?ixlib=rb-1.2.2\u0026auto=compress%2Cformat\u0026lossless=0\u0026w=48\u0026s=b412bff8dbd128054327f89caa133666&quot;,&quot;profileImageUrlW75&quot;:&quot;https://qiita-user-profile-images.imgix.net/https%3A%2F%2Favatars1.githubusercontent.com%2Fu%2F34135364%3Fv%3D4?ixlib=rb-1.2.2\u0026auto=compress%2Cformat\u0026lossless=0\u0026w=75\u0026s=b244585c57b9749552cfc55349cc3bfa&quot;,&quot;urlName&quot;:&quot;salvage0707&quot;,&quot;isFollowedByViewer&quot;:false,&quot;isFollowableByViewer&quot;:true,&quot;websiteUrl&quot;:null,&quot;organizations&quot;:{&quot;edges&quot;:[]}},&quot;tags&quot;:[{&quot;name&quot;:&quot;Ruby&quot;,&quot;urlName&quot;:&quot;ruby&quot;},{&quot;name&quot;:&quot;Rails&quot;,&quot;urlName&quot;:&quot;rails&quot;},{&quot;name&quot;:&quot;Refile&quot;,&quot;urlName&quot;:&quot;refile&quot;}],&quot;followingLikers&quot;:{&quot;edges&quot;:[]},&quot;comments&quot;:{&quot;totalCount&quot;:0}},&quot;viewer&quot;:null,&quot;analyticsTrackingId&quot;:null}" data-hyperapp-mounted="true"><div class="p-items" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="p-items_wrapper"><div class="p-items_container"><div class="it-Actions p-items_stickyMenu"><div class="it-Actions_item it-Actions_item-like likable"><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71/likers" class="it-Actions_likeCount">3</a><button><i class="fa fa-fw fa-thumbs-up"></i></button></div><div class="it-Actions_item it-Actions_item-stock"><button><span class="fa fa-folder-open"></span></button></div><div class="it-Actions_jumpToCommentButton"><div class="it-Actions_commentCount">0</div><div class="fa fa-fw fa-comment"></div></div><div class="it-Actions_shareButton it-Actions_shareButton-twitter"><span class="fa fa-twitter"></span></div><div class="it-Actions_shareButton it-Actions_shareButton-facebook"><span class="fa fa-facebook"></span></div></div><div class="p-items_main"><div class="p-items_article"><div class="it-Header"><div class="u-flex-center-between mb-3"><div class="it-Header_info"><div class="it-Header_author"><a href="https://qiita.com/salvage0707"><img src="./edit.html.erb_files/https___avatars1.githubusercontent.com_u_34135364_v=4" alt="salvage0707" class="it-Header_authorImage"></a><a href="https://qiita.com/salvage0707" class="it-Header_authorName">@salvage0707</a></div><div class="it-Header_time"><span><meta content="2018-04-05T09:01:13Z" itemprop="datePublished"><time datetime="2018-04-12T14:28:51Z" itemprop="dateModified">2018年04月12日に更新</time></span></div><div class="it-Header_meta"><div class="it-Header_manipulate"><div class="it-Header_dropdown"><span class="it-Header_dropdownToggle" tabindex="0"><span class="fa fa-ellipsis-h fa-lg"></span></span><div class="st-Dropdown right"><div><div class="it-Header_dropdown-title">記事の改善</div><a href="https://qiita.com/drafts/2614c97a1f256027ef71/edit" class="st-Dropdown_item"><span class="fa fa-fw fa-code-fork pr-1"></span>編集リクエストを送る</a><div class="st-Dropdown_separator"></div></div><div class="it-Header_dropdown-title">記事の情報</div><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71/revisions" class="st-Dropdown_item"><span class="fa fa-fw fa-history pr-1"></span>編集履歴</a><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71/patches" class="st-Dropdown_item"><span class="fa fa-fw fa-inbox pr-1"></span>編集リクエスト一覧</a><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71/likers" class="st-Dropdown_item"><span class="fa fa-fw fa-thumbs-up pr-1"></span>いいねしたユーザ一覧</a><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71.md" class="st-Dropdown_item"><span class="fa fa-fw fa-file-text-o pr-1"></span>Markdown で本文を見る</a><div class="st-Dropdown_separator"></div><div class="st-Dropdown_item"><span class="fa fa-fw fa-flag pr-1"></span>問題がある記事を報告する</div></div></div></div></div></div></div><h1 class="it-Header_title" itemprop="headline">refile使い方</h1><div class="it-Tags"><a href="https://qiita.com/tags/ruby" class="it-Tags_item"><span>Ruby</span></a><a href="https://qiita.com/tags/rails" class="it-Tags_item"><span>Rails</span></a><a href="https://qiita.com/tags/refile" class="it-Tags_item"><span>Refile</span></a></div></div><div class="it-ActionsMobile"><div class="it-ActionsMobile_like likable"><button><span class="fa fa-fw fa-thumbs-up"></span><span>3</span></button></div><div class="it-ActionsMobile_stock"><button><span class="fa fa-folder-open"></span></button></div></div><div class="it-DeprecationAlert_one mb-5 p-2"><span class="fa fa-warning mr-1"></span>この記事は最終更新日から1年以上が経過しています。</div><section class="it-MdContent" itemprop="articleBody"><div id="item-2614c97a1f256027ef71">
+<h1>
+<span id="インストール" class="fragment"></span><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><i class="fa fa-link"></i></a>インストール</h1>
+
+<p><strong>リファイルgem</strong></p>
+
+<ul>
+<li>ファイルのアップロード先を柔軟に設定できる</li>
+<li>簡単に組み込める</li>
+<li>画像のサムネイルを生成できる</li>
+</ul>
+
+<p><strong>imagemagickインストール</strong> <br>
+<code>$ sudo apt-get update</code><br>
+<code>$ sudo apt-get -y install imagemagick libmagick++-dev</code></p>
+
+<h2>
+<span id="gemに記述" class="fragment"></span><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#gem%E3%81%AB%E8%A8%98%E8%BF%B0"><i class="fa fa-link"></i></a>gemに記述</h2>
+
+<div class="code-frame" data-lang="">
+<div class="code-lang"><span class="bold">Gemfile</span></div>
+<div class="highlight"><pre>gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
+</pre></div>
+</div>
+
+<p>その後に<code>$ bundle install</code></p>
+
+<h1>
+<span id="実装" class="fragment"></span><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#%E5%AE%9F%E8%A3%85"><i class="fa fa-link"></i></a>実装</h1>
+
+<h2>
+<span id="モデルにカラムを持たせるimage_id" class="fragment"></span><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AB%E3%82%AB%E3%83%A9%E3%83%A0%E3%82%92%E6%8C%81%E3%81%9F%E3%81%9B%E3%82%8Bimage_id"><i class="fa fa-link"></i></a>モデルにカラムを持たせる(image_id)</h2>
+
+<p><code>$ rails g migration add_image_id_to_posts image_id:string</code><br>
+<code>$ rails db:migrate</code></p>
+
+<h2>
+<span id="attachmentアタッチメントメソッドを持たせる" class="fragment"></span><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#attachment%E3%82%A2%E3%82%BF%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E6%8C%81%E3%81%9F%E3%81%9B%E3%82%8B"><i class="fa fa-link"></i></a>attachment(アタッチメント)メソッドを持たせる</h2>
+
+<p>image_idを持たせたモデルに<code>attachement :image</code></p>
+
+<div class="code-frame" data-lang="ruby">
+<div class="code-lang"><span class="bold">model/image_idを持ったモデル</span></div>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">PostImage</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+
+  <span class="n">attachment</span> <span class="ss">:image</span> <span class="c1"># ここを追加（_idは含めない）</span>
+
+<span class="k">end</span>
+</pre></div>
+</div>
+
+<h2>
+<span id="ファイルアップロードのフォーム" class="fragment"></span><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0"><i class="fa fa-link"></i></a>ファイルアップロードのフォーム</h2>
+
+<p><code>&lt;%= f.attachment_field :image %&gt;</code><br>
+カラム名は<code>image_id</code>でも<code>:image</code>を引数にする</p>
+
+<h2>
+<span id="画面に埋め込む" class="fragment"></span><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#%E7%94%BB%E9%9D%A2%E3%81%AB%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%80"><i class="fa fa-link"></i></a>画面に埋め込む</h2>
+
+<div class="code-frame" data-lang="text"><div class="highlight"><pre>attachment_image_tag モデル名, :image, :fill, 横幅の数値(例: 100), 縦幅の数値, format: '拡張子名(例: jpg)' 
+</pre></div></div>
+</div></section><div class="it-Footer"><div class="it-Footer_actions"><div class="it-Footer_editRequest"><a href="https://qiita.com/drafts/2614c97a1f256027ef71/edit" class="u-link-no-underline"><span class="fa fa-fw fa-code-fork"></span><span>編集リクエスト</span></a></div><div class="it-Footer_stock"><button><span class="fa fa-folder-open"></span><span class="it-Footer_stockLabel">ストック</span></button></div><div class="it-Footer_like"><button><span class="fa fa-fw fa-thumbs-up"></span><span>いいね</span></button><a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71/likers" class="it-Footer_likeCount">3</a></div></div><div class="it-Footer_social"><div class="it-Footer_shareButton it-Footer_shareButton-twitter"><span class="fa fa-twitter"></span></div><div class="it-Footer_shareButton it-Footer_shareButton-facebook"><span class="fa fa-facebook"></span></div></div></div><div class="ai-Container" itemprop="author" itemscope="true" itemtype="http://schema.org/Person"><div class="ai-User"><a href="https://qiita.com/salvage0707"><img src="./edit.html.erb_files/https___avatars1.githubusercontent(1).com_u_34135364_v=4" alt="salvage0707" class="ai-User_image" itemprop="image"></a><div class="ai-User_body"><div class="ai-User_header"><a href="https://qiita.com/salvage0707" class="ai-User_urlname" itemprop="name">@salvage0707</a></div><div class="ai-User_description"></div><div class="ai-User_footer"><div><button class="it-UserFollowButton it-UserFollowButton-follow">フォロー</button><div class="st-Modal"><div class="st-Modal_backdrop"></div><div class="st-Modal_body lm-Dialog"><div class="fa fa-times lm-Dialog_close"></div><div class="lm-Dialog_title">ユーザー登録して、Qiitaをもっと便利に使ってみませんか。</div><div class="lm-Dialog_message-pc">この機能を利用するにはログインする必要があります。ログインするとさらに便利にQiitaを利用できます。</div><div class="lm-Dialog_message-mobile">この機能を利用するにはログインする必要があります。ログインするとさらに便利にQiitaを利用できます。</div><ol class="lm-Dialog_list"><li>あなたにマッチした記事をお届けします<div class="description">ユーザーやタグをフォローすることで、あなたが興味を持つ技術分野の情報をまとめてキャッチアップできます</div></li><li>便利な情報をあとで効率的に読み返せます<div class="description">気に入った記事を「ストック」することで、あとからすぐに検索できます</div></li></ol><a href="https://qiita.com/signup?callback_action=login_or_signup&amp;redirect_to=%2Fsalvage0707&amp;realm=qiita" class="lm-Dialog_button lm-Dialog_button-signup">登録する</a><a href="https://qiita.com/login?callback_action=login_or_signup&amp;redirect_to=%2Fsalvage0707&amp;realm=qiita" class="lm-Dialog_button lm-Dialog_button-signin">ログインする</a></div></div></div></div></div></div></div><div class="apm-Content"><div class="apm-Content_title">ユーザー登録して、Qiitaをもっと便利に使ってみませんか。</div><ol class="apm-Content_list"><li>あなたにマッチした記事をお届けします<div class="description">ユーザーやタグをフォローすることで、あなたが興味を持つ技術分野の情報をまとめてキャッチアップできます</div></li><li>便利な情報をあとで効率的に読み返せます<div class="description">気に入った記事を「ストック」することで、あとからすぐに検索できます</div></li><div><a class="apm-Content_help" href="https://help.qiita.com/ja/articles/qiita-login-user" target="_blank"><i class="fa fa-fw fa-arrow-circle-right"></i>より詳しく</a></div></ol><a href="https://qiita.com/signup?callback_action=login_or_signup&amp;redirect_to=%2Fsalvage0707%2Fitems%2F2614c97a1f256027ef71&amp;realm=qiita" class="apm-Content_button apm-Content_button-signup">登録する</a><a href="https://qiita.com/login?callback_action=login_or_signup&amp;redirect_to=%2Fsalvage0707%2Fitems%2F2614c97a1f256027ef71&amp;realm=qiita" class="apm-Content_button apm-Content_button-signin">ログインする</a></div><div><div class="it-Ads_afterBodyContainer it-Ads_afterBodyContainer-wide mt-3"><div class="it-Ads_afterBodyWrapper mr-1"><div id="dfp-slot-after-body-for-pc-left" class="ad-300x250" data-test-adunitpath="/383564218/qiita.com_items-show_sidebar-top" elementtiming="gpt-dfp-slot-after-body-for-pc-left" data-google-query-id="COGqwY2Pu-QCFVCEvAodGIQOCw"><div id="google_ads_iframe_/383564218/qiita.com_items-show_sidebar-top_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/383564218/qiita.com_items-show_sidebar-top_0" title="3rd party ad content" name="google_ads_iframe_/383564218/qiita.com_items-show_sidebar-top_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="4" data-load-complete="true" src="./edit.html.erb_files/saved_resource.html"></iframe></div></div></div><div class="it-Ads_afterBodyWrapper"><div id="dfp-slot-after-body-for-pc-right" class="ad-300x250" data-test-adunitpath="/383564218/qiita.com_items-show_sidebar-bottom" elementtiming="gpt-dfp-slot-after-body-for-pc-right" data-google-query-id="COCqwY2Pu-QCFVCEvAodGIQOCw"><div id="google_ads_iframe_/383564218/qiita.com_items-show_sidebar-bottom_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/383564218/qiita.com_items-show_sidebar-bottom_0" title="3rd party ad content" name="google_ads_iframe_/383564218/qiita.com_items-show_sidebar-bottom_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="3" data-load-complete="true" src="./edit.html.erb_files/saved_resource(1).html"></iframe></div></div></div></div><div id="dfp-slot-after-body-for-text-ads" class="" data-test-adunitpath="/383564218/p_qiita_textad" elementtiming="gpt-dfp-slot-after-body-for-text-ads" data-google-query-id="CN-qwY2Pu-QCFVCEvAodGIQOCw"><div id="google_ads_iframe_/383564218/p_qiita_textad_0__container__" style="border: 0pt none; width: 300px; height: 30px;"></div></div></div></div></div><div class="p-items_options"></div><div class="p-items_toc"><div class="it-Toc"><div class="it-Toc_nav"><ul>
+<li>
+<a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</a>
+<ul>
+<li>
+<a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#gem%E3%81%AB%E8%A8%98%E8%BF%B0">gemに記述</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#%E5%AE%9F%E8%A3%85">実装</a>
+<ul>
+<li>
+<a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AB%E3%82%AB%E3%83%A9%E3%83%A0%E3%82%92%E6%8C%81%E3%81%9F%E3%81%9B%E3%82%8Bimage_id">モデルにカラムを持たせる(image_id)</a>
+</li>
+<li>
+<a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#attachment%E3%82%A2%E3%82%BF%E3%83%83%E3%83%81%E3%83%A1%E3%83%B3%E3%83%88%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E6%8C%81%E3%81%9F%E3%81%9B%E3%82%8B">attachment(アタッチメント)メソッドを持たせる</a>
+</li>
+<li>
+<a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0">ファイルアップロードのフォーム</a>
+</li>
+<li>
+<a href="https://qiita.com/salvage0707/items/2614c97a1f256027ef71#%E7%94%BB%E9%9D%A2%E3%81%AB%E5%9F%8B%E3%82%81%E8%BE%BC%E3%82%80">画面に埋め込む</a>
+</li>
+</ul>
+</li>
+</ul>
+</div></div></div></div></div><div class="p-items_wrapper p-items_wrapper-white"><div class="p-items_container"><div class="p-items_leftDummy"></div><div class="p-items_main"><div class="p-items_aside px-5 p-2@s"><div id="logly-lift-4279493"><div id="logly-lift-widget">  <div id="logly-lift-widget-header">    <span>関連記事</span>    <span class="logly-lift-credit logly-lift-credit2"><a href="https://www.logly.co.jp/privacy.html" target="_top" rel="nofollow">Recommended by <span class="logly-lift-credit-logo" title="logly"></span></a></span>  </div>  <div id="logly-lift-widget-content">    <div class="logly-lift-ad">  <span class="logly-lift-ad-icon"><img src="./edit.html.erb_files/c96aef22f43ba392b2d0affba54e47f9" width="18"></span>  <div　class="logly-lift-ad-content">    <a class="logly-lift-ad-link" href="https://qiita.com/Kaisyou/items/5add9d8b38177c45333c" target="_top" style="text-decoration:none;" data-click-url="https://dsp.logly.co.jp/click?ad=G8GmQLsVMLZr_lvktSsAmRNtdZmZfMBzbMt4xgKwCZmUjQ6d4JFaONTRMwgsuojYOPN28CzVrkaUciHX2M_XKETFcCgmER1X9TM1M8xZrFYct7qABtUAfgdqGNanlNZUPI0zy9tERevXaE3J-N8geRLo3XFOXewQsUygg_puN4xX29MZJPQV7pQmYXhW5BCC6EzmjOl2rDOVG_t74cZXF_I3jw4Gg4Lab-h7eS_gDopE-jPQotMMVz9HOyXhpJSOCiP7PTSQRm4D0aVTJsDPTS-5IAcQ0KybfPGBQWG3q1nIQZhupkh5NLDpLZ2nWXw2Tj7fqUQdUCARFu2Wr72XGqpN9CIkquMGe2agbuKd7C5GwHUfgiQRKDdaMyvRTNrwvOxgyYwxGil3ooje23BjUhj84bW-25VaArgzVWei5_melnBLracgOZ1OBDuFe6-eO5VwPFf_PFrKjGSh6v7ApiVYtw3ko-CsUKhJsjggA8co4ELrPfMYqP8xmaODWFufqdl04Qvp6qd4nas6hmtGVTOvTgEeoYd9O-4oox0EjHwaptysr4s6HA" onmousedown="this.setAttribute(&#39;href&#39;,this.getAttribute(&#39;data-click-url&#39;));">      <span class="logly-lift-ad-title">rails　ユーザー画像アップロードの手順</span>    </a>    <span class="logly-lift-ad-author">by Kaisyou</span><img src="./edit.html.erb_files/abc" width="1" height="1" style="position: absolute; width: 1px; height: 1px; top: -32767px; left: -32767px;">  </div　class="logly-lift-ad-content"></div></div><div class="logly-lift-ad">  <span class="logly-lift-ad-icon"><img src="./edit.html.erb_files/5e469c91fe55b2be19a01549a32c233a" width="18"></span>  <div　class="logly-lift-ad-content">    <a class="logly-lift-ad-link" href="https://qiita.com/nekonoprotocol/items/39b888aa64f482ff434a" target="_top" style="text-decoration:none;" data-click-url="https://dsp.logly.co.jp/click?ad=G8GmQLsVMLZr_lvktSsAmRNtdZmZfMBzbMt4xgKwCZmZLHcbXOt9gks2U9b2m8UqHitdik8oDaJH5kAUzQVFBY5JQzZ_dUgI6xf72CIyGqDYLPJVTPF1IP_uQ0CECJDQfsosxdkFnO0QTMLPNnfYKAoYioXuwBk5JzTOEtjBEE1mzIUjOQhbqJbt4QtaQjHfqfTfSg_Ic0wr5eW9iCuFlWtrab6IiBuu373qwXUd8eP2ZK-B8OVCohLaOSMcm5KCZ56it1dKUVti6fKQ7tuSZdHxAn2X_LW1wYJx8CkEEf3UOE2M7-SKMPX4rm3-bgKn7ybwWoE9FPgwIp5hy9tY72ZB3SFzMZfu5aIxZbwj9o8vDLY8dzLd7fvX0GFq_kZ25giVA5Pr0KYLfFp1jt7ZXBdfYM91_2Oy1tX_kESIus_B4ZvzwiTMkoPQrz50A6H_zHNZJWJ33K0OxuvttpI8pu3HkAHFG3-YZHojiODxjufvtFgSjq8Q6wJLee4hqFvcQUQ1opFRsuRhvLHu13Fy5cGC6emTbtQgZnUQ0NNu6aA0N3U-HWb2NZMi21QBNGHIkZ_g2AXUF4yH2nYngo7pSQ" onmousedown="this.setAttribute(&#39;href&#39;,this.getAttribute(&#39;data-click-url&#39;));">      <span class="logly-lift-ad-title">carrierwave 使い方</span>    </a>    <span class="logly-lift-ad-author">by nekonoprotocol</span>  </div　class="logly-lift-ad-content"></div></div><div class="logly-lift-ad">  <span class="logly-lift-ad-icon"><img src="./edit.html.erb_files/8ad9fb4359836e1ffdbf3192b50ccd4f" width="18"></span>  <div　class="logly-lift-ad-content">    <a class="logly-lift-ad-link" href="https://qiita.com/yuiseki/items/55bded2e32d07aef23ab" target="_top" style="text-decoration:none;" data-click-url="https://dsp.logly.co.jp/click?ad=G8GmQLsVMLZr_lvktSsAmRNtdZmZfMBzbMt4xgKwCZnkqZ8cJeYhSxIPYyrCkECpS-nOPXcNkzVD-Xu-iFVpEW5hZyHFQX_M57hQCJqU1lDRDOUp-5Z9FY4srLYrHSyS_CVRCHPYbdHHOEjqAOkOS-NrNTYyYcN8Q4IgsEawRh2mD4L1WgpSoGlJg7pMKSVTNCPegGHd8wIQB6QTYB8f41EhABgLT5PYnIEmbCompVx0sNI351ZjkATnS8nbJnankwztvh-yA0XqgFp4TsXgMrIUAP7V9-JNiwMPPCLLAX4AlSQ_kHWWtt0e2xQ9Q44r6NOv9Cn1d1ZW6su6gGE6WJD0NvJowD1z8qV_-P-_Qh_gx9z6rFWXcQ0sEnFcfRJIcZWfvjcK9fmyJIgFlG8m9cEfiHl9TqXJaT6sT5IJA6BbA_kL2meggk0DSjgWDUyCItE6vWzfCWmqPtdhMzYcUGh8O2PKwvTjmt-nAL5lAx9Hezzc1HVNFwmXuaeP1VTMOXkgVBwLuIiQQa5YCEVZyNBfwSir8SXY7QmHWLymah9sCOunixiTSQ" onmousedown="this.setAttribute(&#39;href&#39;,this.getAttribute(&#39;data-click-url&#39;));">      <span class="logly-lift-ad-title">Ubuntu12.04でimage-magickとrmagickを入れる</span>    </a>    <span class="logly-lift-ad-author">by yuiseki</span>  </div　class="logly-lift-ad-content"></div><div class="logly-lift-ad">  <span class="logly-lift-ad-icon"><img src="./edit.html.erb_files/9475ed20309d3257ce93d5faf4363564" width="18"></span>  <div　class="logly-lift-ad-content">    <a class="logly-lift-ad-link" href="https://qiita.com/corona6@github/items/cfac19432532d261912d" target="_top" style="text-decoration:none;" data-click-url="https://dsp.logly.co.jp/click?ad=G8GmQLsVMLZr_lvktSsAmRNtdZmZfMBzbMt4xgKwCZlmFvgN9eMGKo-oVLiSFrynd9yzzaaV5TAm-Ia9q67mrEB6cSis1aC8AltpnW_94BdLUwKgb1CgVfcWuXVjU_tM14p4F8MeHEoRmwIF-WQF3M4KUgE-6h8i1KMbFrhn22GrH9j6xVkoFsK_ryKJA4PHbKtsBsdFqjmiFHsdBlF66VerKpenzQXagwvUctKWpHzezyAk23qJgnQJPKMMT3EywOkA9r95wbmfFUaBVTbEzQ6zVMU2qMLstcHB7MHdGJTOyrqo67zMRYkAywuJwQy60MJtI69cpdKPfmLo1hAHM7-KGaPSI7JEWuu1r0ZnCol2uKQG-nNju-deYCFHEqrqw8Pus3gaBWbJ7NmL0H84tZC_8DwDpYHRiDNJfcNhp4ARcVWknzoPrUZoTTuE3F-qQ9-9FLUIM_oOu7w8MvCG4zviNZjTMs0fnCoA7HpUo_SeWIQkzl7rVbfE0Jl0miy99RIH1SaRv4oEOP8sJ3r5fVJ_RzDQ_mckyxRD1JDK7D587uJU5KDTD6aBed8Kky5Db9q6XrQoBV41angnLYRYZQ" onmousedown="this.setAttribute(&#39;href&#39;,this.getAttribute(&#39;data-click-url&#39;));">      <span class="logly-lift-ad-title">UbuntuでNginxとUnicornを使いRailsアプリを動かす</span>    </a>    <span class="logly-lift-ad-author">by corona6@github</span>  </div　class="logly-lift-ad-content"></div><div class="logly-lift-ad">    <span class="logly-lift-ad-icon"><img src="./edit.html.erb_files/original.jpg" width="18"></span>    <div　class="logly-lift-ad-content">      <a class="logly-lift-ad-link" href="https://dsp.logly.co.jp/click?ad=G8GmQLsVMLZr_lvktSsAmRNtdZmZfMBzZ59T26RQAc8v0UOgBf0twa-g7FnUo7loA6KMn5HNmZXSCx8Ud-TEN8wRdKPpNkS7HFlkCTES08uYfB-787ibUyvrFw9mKojrmP0VNVhecBhbJ9cfjB2tN0DS1Vn_FoMqlzVSvqdDpLpUGhSN07vIxbCxNZ5ZmJwr7vQdFlCq-gB86qiN5rTfhnKPuJ_dfbXSzHUpL6h1FmTzxlbs5vDRdPk5XNrDcb_nQhgeFAxEuzaXzL2xVxIAUaPxQdLnwAcfUmzHCiirZ0qXK06gMo3t7bEz_4_BH4wiCMnt3LwWdF8ZpjeYVzwmKEsgpWKmxYVm5rLpriDRA5KKT-YxoOr8WS79KW5kQogRyKIT7MXXNzsHm4IYjiYgANJpnYfywew5-FbgglGNxWe6OoEtuqo16LzF6flxXAoRiuTbiXNgYOHne7gexcHAKiBeoNCfg2dT8Fd3ys0J8B0uv-sOUWrkBVYd5Hw8RO_CTqqm91ub4H8rFJqIUtOxKsHfON2Tp7HYa0-s0VaLSJiZlnNrc6O07iBlWMq617XbYPKkkXBFc3Zb2eeWXuYjDn3l27OZkla9RiZ37SdGDcohGnhrT_b9kvw7C1i_xHxje8s5g0QS9Uk8D1bsqHF0InBHrWdTHTNg" target="_blank" style="text-decoration:none;" rel="nofollow">        <span class="logly-lift-ad-title">Windows 7 まもなくサポート終了</span>      </a><img src="./edit.html.erb_files/bc" width="1" height="1" style="position: absolute; width: 1px; height: 1px; top: -32767px; left: -32767px;">      <span class="logly-lift-ad-adv">PR 日本マイクロソフト株式会社</span>    </div　class="logly-lift-ad-content"></div><div class="logly-lift-ad">    <span class="logly-lift-ad-icon"><img src="./edit.html.erb_files/normal.png" width="18"></span>    <div　class="logly-lift-ad-content">      <a class="logly-lift-ad-link" href="https://dsp.logly.co.jp/click?ad=G8GmQLsVMLZr_lvktSsAmRNtdZmZfMBzKORyIjS2zfUxFc9QASqdDqflS3Xbdq_8Bm9d3N8vrSOD1oJl8IqZdDNr4RyzBBCw1IIrmX4UQXYabzMt4gJNYDtZ-dYK8nPPPmz4hlP-uqo65WZtccnUTdVHhdd-vcRd3bL0rG0Z8p6SWhsRLALwnwmnsg_DDabjKxJFRfgc-WO-y2ougnOOq9f_Rb5H8NB2oOavjD_E75LGVgfQkooOnzCQE0jG-0e9Gn-qxWawEzaN6iJhQaplDSXHi0aA81KixosGzVUSpbsUHqW8I_yl2zH5Xy1j8tSmT-6gYyoPJRAeVQOTKRZpIm4t0ab_fq7BjS4FDiVB699fgo0rj32vQVlIIQxOrAqe7Tq1Ur4uXTRQPouDlPNEwoI9XxWePNhZW0p7mDDzocizukoJU4gW5xlLTCCYRaxTdJGpz-T7Xhikak-cUp4xBfkertSPYbl8sY_APK1emVtCmFM-0R_XWo-LeuWEUT_zjqGehXbhxRVY5VTWp2YyfTQ6zpumsqe2" target="_blank" style="text-decoration:none;" rel="nofollow">        <span class="logly-lift-ad-title">LINEグループでGrowth開発に特化する面白みとは！</span>      </a><img src="./edit.html.erb_files/bc(1)" width="1" height="1" style="position: absolute; width: 1px; height: 1px; top: -32767px; left: -32767px;">      <span class="logly-lift-ad-adv">PR LINE GT</span>    </div　class="logly-lift-ad-content"></div>    <div class="logly-lift-clear"></div></div></div><div class="p-items_aside mt-5 px-5 p-2@s"></div><div><div class="it-Ads_afterReferenceContainer"><div class="it-Ads_afterReferenceWrapper"><div id="dfp-slot-after-reference" class="ad-300x250" data-test-adunitpath="/383564218/qiita.com_items-show_under-article-mobile_2" elementtiming="gpt-dfp-slot-after-reference" data-google-query-id="CLOUw42Pu-QCFVCEvAodGIQOCw"><div id="google_ads_iframe_/383564218/qiita.com_items-show_under-article-mobile_2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/383564218/qiita.com_items-show_under-article-mobile_2_0" title="3rd party ad content" name="google_ads_iframe_/383564218/qiita.com_items-show_under-article-mobile_2_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true" src="./edit.html.erb_files/saved_resource(2).html"></iframe></div></div></div></div></div><div class="p-items_aside mt-5 px-5 p-2@s" id="comments-wrapper"></div></div><div class="p-items_rightDummy"></div></div></div><div class="st-Modal"><div class="st-Modal_backdrop"></div><div class="st-Modal_body lm-Dialog"><div class="fa fa-times lm-Dialog_close"></div><div class="lm-Dialog_title">ユーザー登録して、Qiitaをもっと便利に使ってみませんか。</div><div class="lm-Dialog_message-pc">この機能を利用するにはログインする必要があります。ログインするとさらに便利にQiitaを利用できます。</div><div class="lm-Dialog_message-mobile">この機能を利用するにはログインする必要があります。ログインするとさらに便利にQiitaを利用できます。</div><ol class="lm-Dialog_list"><li>あなたにマッチした記事をお届けします<div class="description">ユーザーやタグをフォローすることで、あなたが興味を持つ技術分野の情報をまとめてキャッチアップできます</div></li><li>便利な情報をあとで効率的に読み返せます<div class="description">気に入った記事を「ストック」することで、あとからすぐに検索できます</div></li></ol><a href="https://qiita.com/signup?callback_action=login_or_signup&amp;redirect_to=%2Fsalvage0707%2Fitems%2F2614c97a1f256027ef71&amp;realm=qiita" class="lm-Dialog_button lm-Dialog_button-signup">登録する</a><a href="https://qiita.com/login?callback_action=login_or_signup&amp;redirect_to=%2Fsalvage0707%2Fitems%2F2614c97a1f256027ef71&amp;realm=qiita" class="lm-Dialog_button lm-Dialog_button-signin">ログインする</a></div></div><div class="st-Modal"><div class="st-Modal_backdrop"></div><div class="st-Modal_body"><form><div class="st-Form"></div><div class="st-Form"><label><input type="radio" name="reason" value="spam" required="">スパムです</label></div><div class="st-Form"><label><input type="radio" name="reason" value="harassment" required="">攻撃的または迷惑な内容を含んでいます</label></div><div class="st-Form"><label><input type="radio" name="reason" value="inappropriate_content" required="">不適切な内容を含んでいます</label></div><div class="st-Form st-Form-right"><input class="st-Form_submit" type="submit" value="送信"></div></form></div></div></div></div><script src="./edit.html.erb_files/td_qt_access.js" type="text/javascript"></script><script>microadTd.QT.start({"article_category": "Ruby,Rails,Refile"})</script><script>(function(d,u){var b=d.getElementsByTagName("script")[0],j=d.createElement("script");j.async=true;j.src=u;b.parentNode.insertBefore(j,b);})(document,"//img.ak.impact-ad.jp/ut/ff9a3577423c8ed5_4330.js");</script><noscript><iframe frameborder="0" height="0" src="//nspt.unitag.jp/ff9a3577423c8ed5_4330.php" width="0"></iframe></noscript><footer id="globalFooter" class="st-Footer px-2 px-1@s pt-1 pt-3@s pb-2"><div class="st-Footer_container"><ul class="st-Footer_start"><li class="st-Footer_link"><a class="st-Footer_copyright" href="https://increments.co.jp/">© 2011-2019 Increments Inc.</a></li><li class="st-Footer_link"><a href="https://qiita.com/terms">利用規約</a></li><li class="st-Footer_link"><a target="_blank" href="http://help.qiita.com/ja/articles/qiita-community-guideline">ガイドライン</a></li><li class="st-Footer_link"><a href="https://qiita.com/privacy">プライバシー</a></li><li class="st-Footer_link"><a href="https://help.qiita.com/">ヘルプ</a></li></ul><ul class="st-Footer_end"><li class="st-Footer_link"><a href="https://qiita.com/about">Qiita とは</a></li><li class="st-Footer_link"><a href="https://qiita.com/users">ユーザー</a></li><li class="st-Footer_link"><a href="https://qiita.com/tags">タグ</a></li><li class="st-Footer_link"><a href="https://qiita.com/items">記事</a></li><li class="st-Footer_link"><a href="https://blog.qiita.com/">ブログ</a></li><li class="st-Footer_link"><a href="https://qiita.com/api/v2/docs">API</a></li><li class="st-Footer_link"><a href="https://jobs.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=footer">Qiita Jobs</a></li><li class="st-Footer_link"><a href="https://teams.qiita.com/">Qiita:Team</a></li><li class="st-Footer_link"><a target="_blank" href="https://zine.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=footer">Qiita:Zine</a></li><li class="st-Footer_link"><a target="_blank" href="https://qiita.com/ads?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=footer">広告掲載</a></li><li class="st-Footer_link"><a href="https://qiita.com/feedback/new">ご意見</a></li></ul></div></footer></div><script type="text/javascript" charset="UTF-8">!function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}},s=["addRecord","set","trackEvent","trackPageview","trackClicks","ready","fetchGlobalID","fetchUserSegments"],a=0;a<s.length;a++){var c=s[a];e[t].prototype[c]=r(c)}var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/1.9.2/td.min.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(n,i)}}("Treasure",this);</script><script type="text/javascript" charset="UTF-8" src="./edit.html.erb_files/aid"></script><div class="p-messages"><div data-hyperapp-app="Message" data-hyperapp-props="{&quot;messages&quot;:[]}" data-hyperapp-mounted="true"><div class="msg-Container"></div></div></div><div id="dataContainer" style="display: none;" data-config="{&quot;actionPath&quot;:&quot;public/items#show&quot;,&quot;settings&quot;:{&quot;analyticsTrackingId&quot;:&quot;UA-24675221-12&quot;,&quot;mixpanelToken&quot;:&quot;17d24b448ca579c365d2d1057f3a1791&quot;,&quot;assetsMap&quot;:{},&quot;csrfToken&quot;:&quot;n4+AsK4dZH2AiGk9AYc4g3eAS3kWg3WZ6JBQDrX9h3Xqk98aXBfou4h4c/t0JOJSlz7VvVmbRPXwV7Tuju/tOA==&quot;,&quot;locale&quot;:&quot;ja&quot;},&quot;currentUser&quot;:null}"></div><div id="itm_4330" style="visibility: hidden; display: none;"></div><iframe id="aopb_ff9a3577423c8ed5" frameborder="0" scrolling="no" width="1" height="1" style="display: none" src="./edit.html.erb_files/pb.html"></iframe><iframe id="google_osd_static_frame_1435812239579" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./edit.html.erb_files/saved_resource(3).html"></iframe><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><img src="./edit.html.erb_files/adsct" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-58Z82M');</script><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./edit.html.erb_files/activityi.html"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./edit.html.erb_files/activityi(1).html"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./edit.html.erb_files/activityi(2).html"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./edit.html.erb_files/activityi(3).html"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./edit.html.erb_files/activityi(4).html"></iframe><img src="./edit.html.erb_files/rep" style="display: none;"><div style="display: none; visibility: hidden;"><iframe src="./edit.html.erb_files/activityi(5).html" width="1" height="1" frameborder="0" style="display:none"></iframe></div><div style="display: none; visibility: hidden;"><iframe src="./edit.html.erb_files/activityi(6).html" width="1" height="1" frameborder="0" style="display:none"></iframe></div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nv2kc",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","809797712462041");fbq("track","PageView");</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nxmb9");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","996402550503199");fbq("track","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","954575148009345");fbq("track","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","437265843064161");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nw0lq",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nw1xy",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nw9n2",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","262978464137256");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","256605841418458");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","386990638325508");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nxlif",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nxlih",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nxyp7",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("ny46g",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1733466696949178");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","ny5vy");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">var _fout_queue=_fout_queue||{};void 0===_fout_queue.segment&&(_fout_queue.segment={});void 0===_fout_queue.segment.queue&&(_fout_queue.segment.queue=[]);_fout_queue.segment.queue.push({user_id:19972,advertiser_id:6796,contractor_id:5});(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://":"http://")+"js.fout.jp/segmentation.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+        </div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4740006retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813012retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813013retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813014retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4815034retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4815035retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813015retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2040876882868599");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1469129556533591");fbq("track","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5048036retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5048036retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5053023retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5048036retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5054022retargeting"});</script>
+<script src="./edit.html.erb_files/tfa.js"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">var _fout_queue=_fout_queue||{};void 0===_fout_queue.segment&&(_fout_queue.segment={});void 0===_fout_queue.segment.queue&&(_fout_queue.segment.queue=[]);_fout_queue.segment.queue.push({user_id:21947,advertiser_id:8063,contractor_id:5});(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://":"http://")+"js.fout.jp/segmentation.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+        
+        </div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">!function(){if(window.SmartnewsAds=window.SmartnewsAds||{},!window.SmartnewsAds.p){var a=window.SmartnewsAds.p=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};window.SmartnewsAds._p||(window.SmartnewsAds._p=a);a.push=a;a.version="1.0.0";a.queue=[];var b=document.createElement("script");b.async=!0;b.src="//cdn.smartnews-ads.com/i/pixel.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}}();SmartnewsAds.p("c2e22923c3676a816c61d14d","PageView");</script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">!function(){if(window.SmartnewsAds=window.SmartnewsAds||{},!window.SmartnewsAds.p){var a=window.SmartnewsAds.p=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};window.SmartnewsAds._p||(window.SmartnewsAds._p=a);a.push=a;a.version="1.0.0";a.queue=[];var b=document.createElement("script");b.async=!0;b.src="//cdn.smartnews-ads.com/i/pixel.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}}();SmartnewsAds.p("fb5a36b36f6a47f3ae2af8c6","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">!function(){if(window.SmartnewsAds=window.SmartnewsAds||{},!window.SmartnewsAds.p){var a=window.SmartnewsAds.p=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};window.SmartnewsAds._p||(window.SmartnewsAds._p=a);a.push=a;a.version="1.0.0";a.queue=[];var b=document.createElement("script");b.async=!0;b.src="//cdn.smartnews-ads.com/i/pixel.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}}();SmartnewsAds.p("218d489b0df6609f4876420b","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">!function(){if(window.SmartnewsAds=window.SmartnewsAds||{},!window.SmartnewsAds.p){var a=window.SmartnewsAds.p=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};window.SmartnewsAds._p||(window.SmartnewsAds._p=a);a.push=a;a.version="1.0.0";a.queue=[];var b=document.createElement("script");b.async=!0;b.src="//cdn.smartnews-ads.com/i/pixel.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}}();SmartnewsAds.p("5f64d149dd4731f0f0190385","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nzdtr");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nziop",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">!function(){if(window.SmartnewsAds=window.SmartnewsAds||{},!window.SmartnewsAds.p){var a=window.SmartnewsAds.p=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};window.SmartnewsAds._p||(window.SmartnewsAds._p=a);a.push=a;a.version="1.0.0";a.queue=[];var b=document.createElement("script");b.async=!0;b.src="//cdn.smartnews-ads.com/i/pixel.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}}();SmartnewsAds.p("4fc5ab48b835653a76f95b96","PageView");</script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nznn0",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nznn2",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nzu0q");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;"><script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nve3t");twq("track","PageView");</script></div><div style="display: none; visibility: hidden;"><script type="text/javascript" language="javascript">var yahoo_retargeting_id="USSDKFK3A8",yahoo_retargeting_label="",yahoo_retargeting_page_type="",yahoo_retargeting_items=[{item_id:"",category_id:"",price:"",quantity:""}];</script>
+<script type="text/javascript" language="javascript" src="./edit.html.erb_files/s_retargeting.js"></script></div><div style="display: none; visibility: hidden;">
+<script src="./edit.html.erb_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("o03ez",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","o058w");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","o0jpn");twq("track","PageView");</script>
+</div><script src="./edit.html.erb_files/adsct(1)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(2)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(4)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(5)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(6)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(7)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(8)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(9)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(10)" type="text/javascript"></script><iframe src="./edit.html.erb_files/beacon.html" style="display: none;"></iframe><script src="./edit.html.erb_files/adsct(11)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(12)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(13)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(14)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(15)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(16)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(17)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(3)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(18)" type="text/javascript"></script><script src="./edit.html.erb_files/adsct(19)" type="text/javascript"></script></body></html>

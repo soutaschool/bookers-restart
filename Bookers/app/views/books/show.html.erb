@@ -1,0 +1,38 @@
+<html><head><style type="text/css">.turbolinks-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 9999;
+  transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}</style>
+
+
+    <link rel="stylesheet" media="all" href="/assets/application.css" data-turbolinks-track="reload">
+  <title>show page</title>
+</head>
+
+  <body>
+    <p id="notice"></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @book.body %>
+</p>
+
+<!-- 編集部分 -->
+<%= link_to "Edit |", edit_book_path(@book) %>
+
+<%= link_to "Back", books_path %>
+<!-- <a href="/books/new">Back</a> -->
+
+
+</body></html>
